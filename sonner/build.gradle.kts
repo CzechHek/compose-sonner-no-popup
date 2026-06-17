@@ -15,15 +15,15 @@ repositories {
 }
 
 dependencies {
-    implementation(compose.runtime)
-    implementation(compose.foundation)
-    implementation(compose.ui)
-    implementation(compose.desktop.currentOs)
+    implementation("org.jetbrains.compose.runtime:runtime-desktop:1.10.1")
+    implementation("org.jetbrains.compose.foundation:foundation-desktop:1.10.1")
+    implementation("org.jetbrains.compose.ui:ui-desktop:1.10.1")
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.10.2")
 }
 
-kotlin {
-    jvmToolchain(21)
+java {
+    sourceCompatibility = JavaVersion.VERSION_11
+    targetCompatibility = JavaVersion.VERSION_11
 }
 
 publishing {
